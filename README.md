@@ -1,0 +1,1 @@
+A diary which persist momo and my life.
