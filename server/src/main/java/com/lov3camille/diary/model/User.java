@@ -1,9 +1,6 @@
 package com.lov3camille.diary.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Data;
 
 @Data
@@ -12,4 +9,13 @@ public class User {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     private Long userId;
+
+    @Column(name = "name")
+    private String name;
+
+    @Column(name = "password")
+    private String password;
+
+    @Column(name = "mail")
+    private String mail;
 }
