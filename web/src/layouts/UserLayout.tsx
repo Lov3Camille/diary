@@ -1,9 +1,8 @@
 // ** React Imports
-import { ReactNode } from 'react'
+import {ReactNode} from 'react'
 
 // ** MUI Imports
-import Box from '@mui/material/Box'
-import { Theme } from '@mui/material/styles'
+import {Theme} from '@mui/material/styles'
 import useMediaQuery from '@mui/material/useMediaQuery'
 
 // ** Layout Imports
@@ -17,7 +16,7 @@ import VerticalNavItems from 'src/navigation/vertical'
 import VerticalAppBarContent from './components/vertical/AppBarContent'
 
 // ** Hook Import
-import { useSettings } from 'src/@core/hooks/useSettings'
+import {useSettings} from 'src/@core/hooks/useSettings'
 
 interface Props {
   children: ReactNode

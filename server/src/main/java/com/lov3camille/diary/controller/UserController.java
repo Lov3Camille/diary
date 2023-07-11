@@ -1,21 +1,30 @@
 package com.lov3camille.diary.controller;
 
-import com.lov3camille.diary.Repository.UserRepository;
 import com.lov3camille.diary.model.User;
-import lombok.NonNull;
+import com.lov3camille.diary.service.UserService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
+@RequestMapping("/api/user")
 public class UserController {
-    private final @NonNull UserRepository userRepository;
+    private final UserService userService;
 
-    @GetMapping("/users")
+    @PostMapping("/register")
+    public User registerUser(@RequestBody User user) {
+        return userService.registerUser(user);
+    }
+
+    @PostMapping("/login")
+    public User loginUser(@RequestParam String userName, @RequestParam String password) {
+        return userService.loginUser(userName, password);
+    }
+
+    @GetMapping("/")
     public List<User> getUsers() {
-        return userRepository.findAll();
+        return userService.getAllUser();
     }
 }
