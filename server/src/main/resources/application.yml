@@ -13,5 +13,5 @@ spring:
 
 springdoc:
   swagger-ui:
-    path: /swagger-ui-custom.html
+    path: /swagger-ui-kratos.html
     operationsSorter: method
